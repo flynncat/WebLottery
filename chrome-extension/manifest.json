@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "直播抽奖监控",
+  "version": "1.0.0",
+  "description": "在已打开的企业直播页中检测抽奖倒计时，并用系统通知提醒。不会自动点击抽奖。",
+  "action": {
+    "default_title": "直播抽奖监控",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage", "notifications", "tabs"],
+  "host_permissions": [
+    "https://qlive.woa.com/*",
+    "http://qlive.woa.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://qlive.woa.com/*",
+        "http://qlive.woa.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

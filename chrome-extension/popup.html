@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>直播抽奖监控</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <h1>直播抽奖监控</h1>
+        <p class="sub">在你已打开的直播页里看倒计时，不会自动点抽奖。</p>
+      </header>
+
+      <label class="switch-row">
+        <span>启用监控</span>
+        <input id="toggle" type="checkbox" />
+      </label>
+
+      <section class="card">
+        <p class="muted">当前状态</p>
+        <p id="phase" class="phase">正在读取…</p>
+        <p class="muted">抽奖区域 / 倒计时</p>
+        <p id="detail" class="detail">--</p>
+      </section>
+
+      <p id="hint" class="hint">请先用普通 Chrome 打开并登录直播页，再保持这个扩展开启。</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

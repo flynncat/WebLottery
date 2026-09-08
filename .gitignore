@@ -53,3 +53,9 @@ Desktop.ini
 *.log
 *.tmp
 *.temp
+
+# Chrome 扩展打包与本地缓存（源码目录 chrome-extension/ 需要入库）
+*.crx
+*.pem
+chrome-extension/*.zip
+chrome-extension/.cache/

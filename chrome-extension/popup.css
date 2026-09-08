@@ -1,0 +1,87 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 320px;
+  background: #16181f;
+  color: #eef1f7;
+  font-family: "Microsoft YaHei UI", "Segoe UI", sans-serif;
+}
+
+.wrap {
+  padding: 16px 16px 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sub,
+.muted,
+.hint {
+  margin: 0;
+  color: #8b93a7;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.sub {
+  margin-top: 6px;
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 14px 0 12px;
+  font-size: 13px;
+}
+
+.card {
+  background: #212532;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.card .muted + .phase,
+.card .muted + .detail {
+  margin-top: 4px;
+}
+
+.card .muted:nth-of-type(2) {
+  margin-top: 10px;
+}
+
+.phase {
+  margin: 0;
+  color: #3d8bfd;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.detail {
+  margin: 0;
+  color: #3dd68c;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Consolas, "Cascadia Mono", monospace;
+  word-break: break-all;
+}
+
+.hint {
+  margin-top: 12px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #3d8bfd;
+}
